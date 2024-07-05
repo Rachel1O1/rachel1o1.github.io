@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    transition: background-color 400ms, color 400ms;
+}
+
+.dark1 {
+    background-color: #131313;
+    color: white;
+}
+
+.light1 {
+    background-color: white;
+    color: #131313;
+}
+
+section {
+    display: grid; /*part1 of aligning a single item in the center*/
+    place-items: center; /*part2 of aligning a single item in the center*/
+    align-content: center; /*aligns multiple items (a grouping into center*/
+    min-height: 100vh; /* 100vh = 100% of viewport's height, vw = width*/
+}
+
+.hidden0 {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(-100%);
+    transition: opacity 1s,filter 1s, transform 1s;;
+}
+
+.hidden1 {
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity 1s,filter 1s, transform 1s;;
+}
+
+.hidden2 {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translate(100%);
+    transition: opacity 1s,filter 1s, transform 1s;;
+}
+
+.image:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.image:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.image:nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.images {
+    display: flex;
+    gap: 5vw;
+}
+
+.mini {
+    max-height: 20vh;
+    max-width: 20vw;
+}
+
+.nav {
+    transition: background-color 400ms, color 400ms;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed; 
+    top: 0;
+    width: 100vw;
+    z-index: 2;
+    height: 4em;
+}
+
+.gone {
+    transition: none;
+    display: none;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    font-weight: bold;
+    padding: 1.4em 2vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: medium;
+}
+
+.dark2 {
+    color: #7f7f7f;
+}
+
+.dark2:hover {
+    color: white;
+}
+
+.light2 {
+    color: #808080;
+}
+
+.light2:hover {
+    color: black;
+}
+
+li a:hover {
+    transition: color 400ms;
+}
+
+.logo {
+    align-self: center;
+    height: 3em;
+    padding: 0.4em 0.5em;
+}
+
+.active.dark2 {
+    color: white !important;
+}
+
+.active.light2 {
+    color: black !important;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.dark4 {
+    color: white;
+}
+
+.light4 {
+    color: black;
+}
+
+.title {
+    display: block;
+    font-weight: bold;
+    font-size: 110%;
+    padding: 1.1em .5em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.dark5 {
+    background-color: #292929;
+}
+
+.light5 {
+    background-color: #a8dcd8;
+}
+
+.base {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 1em;
+    overflow: hidden;
+    bottom: 0;
+    width: 100vw;
+    height: 7em;
+    align-content: center;
+    text-align: center;
+}
+
+.base a {
+    padding: 0 1.2vw;
+}
+
+.dark1.scrolled {
+    background-color: #292929;
+}
+
+.light1.scrolled {
+    background-color: #a8dcd8;
+}
+
+.dark6 {
+    background-color: #292929;
+    border: .5vw solid white;
+    transition: background-color 400ms, color 400ms, border 400ms;
+}
+
+.dark6 h1 {
+    color: white;
+    transition: color 400ms;
+}
+
+.dark6 p {
+    color: white;
+    transition: color 400ms;
+}
+
+.dark6 p a {
+    color: #48bebe;
+    transition: color 400ms;
+}
+
+.light6 {
+    background-color: #a8dcd8;
+    border: .5vw solid black;
+    transition: background-color 400ms, color 400ms, border 400ms;
+}
+
+.light6 h1 {
+    color: black;
+    transition: color 400ms;
+}
+
+.light6 p {
+    color: black;
+    transition: color 400ms;
+}
+
+.dark12 {
+    background-color: #292929;
+    border: .5vw solid white;
+    transition: background-color 400ms, color 400ms, border 400ms;
+}
+
+.dark12 h1 {
+    color: white;
+    transition: color 400ms;
+}
+
+.dark12 p {
+    color: white;
+    transition: color 400ms;
+}
+
+.dark12 p a {
+    color: #48bebe;
+    transition: color 400ms;
+}
+
+.light12 {
+    background-color: #f5ddbb;
+    border: .5vw solid black;
+    transition: background-color 400ms, color 400ms, border 400ms;
+}
+
+.light12 h1 {
+    color: black;
+    transition: color 400ms;
+}
+
+.light12 p {
+    color: black;
+    transition: color 400ms;
+}
+
+.light12 p a {
+    color: #48bebe;
+    transition: color 400ms;
+}
+
+.profilePicLong {
+    max-height: 20vw;
+    max-width: 20vw;
+    border-radius: 50%;
+    z-index: 1;
+    position: absolute;
+    top: -10vw;
+    left: -45vw;
+}
+
+.profilePicShort {
+    max-height: 70vw;
+    max-width: 70vw;
+    border-radius: 50%;
+    z-index: 1;
+    margin-top: 12vh;
+    display: block;
+    align-self: center;
+}
+
+.profileBoxLong {
+    border-radius: 3vw;
+    position: absolute;
+    padding-left: 12vw;
+    top: -25vh;
+    left: -35vw;
+    width: 67vw;
+    min-height: 50vh;
+    align-content: center;
+}
+
+.profileBoxShort {
+    border-radius: 3vw;
+    padding: 3vw;
+    width: 70vw;
+    margin-top: 3vh;
+    align-content: center;
+    margin-bottom: 5vh;
+}
+
+.contactBox {
+    border-radius: 3vw;
+    position: absolute;
+    padding: 3vw;
+    top: -28.5vh;
+    left: -37vw;
+    width: 67vw;
+    min-height: 50vh;
+    align-content: center;
+    text-align: center;
+}
+
+h1 {
+    line-height: .8;
+}
+
+p {
+    line-height: 2;
+}
+
+.dropbtn {
+    border: none;
+    border-radius: 3vw;
+    background-color: transparent;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin: 1.4em 2vw;
+    z-index: 2;
+}
+
+.dropbtn.dark7 {
+    color: white;
+}
+
+.dropbtn.light7 {
+    color: black;
+}
+
+.dropbtnOpen.dark7 {
+    color: #7f7f7f;
+}
+
+.dropbtnOpen.light7 {
+    color: #808080;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.dark8 {
+    background-color: white;
+}
+
+.dark8 a {
+    color: black;
+}
+
+.light8 {
+    border: solid;
+    background-color: #808080;
+}
+
+.light8 a {
+    color: black;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 30vw;
+    left: -20vw;
+    top: 4em;
+    overflow: auto;
+    border-radius: 3vw;
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown.dark9 a:hover {
+    background-color: #7f7f7f;
+}
+
+.dropdown.light9 a:hover{
+    background-color: #131313;
+}
+
+.showDrop {
+    display: block;
+}
+
+.dark10, a {
+    color: #48bebe;
+}
+
+.light10, a {
+    color: #d0782b;
+}
+
+.dark3 {
+    background-color: #7f7f7f;
+    color: white;
+    border: .3em white;
+    border-style: solid;
+}
+
+.dark3:hover {
+    background-color: white;
+    color: #7f7f7f;
+    border: .3em #7f7f7f;
+    border-style: solid;
+}
+
+.light3 {
+    background-color: #808080;
+    color: black;
+    border: .3em black;
+    border-style: solid;
+}
+
+.light3:hover {
+    background-color: black;
+    color: #808080;
+    border: .3em #808080;
+    border-style: solid;
+}
+
+#darkModeBtn {
+    display: block;
+    position: fixed;
+    width: 3.5em;
+    height: 3.5em;
+    bottom: 1em;
+    left: 1em;
+    border-radius: 1em;
+    z-index: 2;
+    transition: background-color 400ms, color 400ms, border 400ms;
+}
+
+.dark11 {
+    border: solid white;
+}
+
+.light11 {
+    border: solid black;
+}
+
+@media(prefers-reduced-motion) {
+    body {
+        transition: none;
+    }
+    .hidden {
+        transition: none;
+    }
+    .hidden0 {
+        transition: none;
+    }
+    .hidden1 {
+        transition: none;
+    }
+    .hidden2 {
+        transition: none;
+    }
+    .nav {
+        transition: none;
+    }
+    li a:hover {
+        transition: none;
+    }
+    #darkModeBtn {
+        transition: none;
+    }
+    h1 {
+        transition: none;
+    }
+    p {
+        transition: none;
+    }
+    a {
+        transition: none;
+    }
+}
+
+.projectPicLong {
+    max-width: 20vw;
+    border-radius: 3vw;
+    z-index: 1;
+    align-self: center;
+}
+
+.projectPicShort {
+    max-height: 20vh;
+    border-radius: 3vw;
+    z-index: 1;
+    align-self: center;
+}
+
+.project1BoxLong {
+    border-radius: 3vw;
+    padding: 2vw;
+    align-content: center;
+    text-align: left;
+    display: grid;
+    grid-template-columns: .4fr 1fr;
+    width: 80vw;
+    margin-top: 3vh;
+    align-self: center;
+}
+
+.project1BoxShort {
+    border-radius: 3vw;
+    padding: 2vw;
+    align-content: center;
+    text-align: left;
+    display: flex;
+    flex-direction: column; 
+    width: 80vw;
+    margin-top: 3vh;
+    align-self: center;
+}
+
+.project1BoxShort iframe {
+    display:block;
+    margin: 0 auto;
+}
+
+.project2BoxLong {
+    border-radius: 3vw;
+    padding: 2vw;
+    align-content: center;
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr .4fr;
+    width: 80vw;
+    margin-top: 3vh;
+    align-self: center;
+}
+
+.project2BoxShort {
+    border-radius: 3vw;
+    padding: 2vw;
+    align-content: center;
+    text-align: left;
+    width: 80vw;
+    margin-top: 3vh;
+    align-self: center;
+    display: flex; 
+    flex-direction: column-reverse; 
+}
+
+.project2BoxShort iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+#projectList {
+    margin-top: 8vh;
+    margin-bottom: 4vh;
+    display: grid;
+}
