@@ -51,6 +51,15 @@ function AdjustToScreen() {
         navBar2.classList.add('gone');
     }
 
+    const extraDrawing = document.getElementById("extraDrawing");
+    if (extraDrawing) {
+        if ((window.innerWidth < 700) || (screen.width < 700)) {
+            extraDrawing.classList.add('gone');
+        } else {
+            extraDrawing.classList.remove('gone');
+        }
+    }
+
     const imagesGroup1 = document.getElementById("group1");
     const imagesGroup2 = document.getElementById("group2");
     if (imagesGroup1) {

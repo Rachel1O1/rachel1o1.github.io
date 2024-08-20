@@ -60,6 +60,39 @@ section {
     transition-delay: 600ms;
 }
 
+.contactBox > .imgDisplay {
+    display: flex;
+    gap: 5vw;
+}
+
+.contactBox > .imgDisplay > img {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    height: auto;
+    border-radius: 10%;
+}
+
+.images0 {
+    margin-top: 12vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.images0 > div {
+    width: 100%;
+    flex: 50%;
+    height: 50vh;
+    margin-bottom: 5vh;
+}
+
+.images0 > div > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50vh;
+}
+
 .images2 {
     display: flex;
     gap: 5vw;
