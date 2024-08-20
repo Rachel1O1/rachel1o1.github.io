@@ -53,16 +53,18 @@ function AdjustToScreen() {
 
     const imagesGroup1 = document.getElementById("group1");
     const imagesGroup2 = document.getElementById("group2");
-    if ((window.innerWidth < 650) || (screen.width < 650)) {
-        imagesGroup1.classList.add('images1');
-        imagesGroup1.classList.remove('images2');
-        imagesGroup2.classList.add('images1');
-        imagesGroup2.classList.remove('images2');
-    } else {
-        imagesGroup1.classList.remove('images1');
-        imagesGroup1.classList.add('images2');
-        imagesGroup2.classList.remove('images1');
-        imagesGroup2.classList.add('images2');
+    if (imagesGroup1) {
+        if ((window.innerWidth < 650) || (screen.width < 650)) {
+            imagesGroup1.classList.add('images1');
+            imagesGroup1.classList.remove('images2');
+            imagesGroup2.classList.add('images1');
+            imagesGroup2.classList.remove('images2');
+        } else {
+            imagesGroup1.classList.remove('images1');
+            imagesGroup1.classList.add('images2');
+            imagesGroup2.classList.remove('images1');
+            imagesGroup2.classList.add('images2');
+        }
     }
 
     //changes the layout of the profile page so that if the
