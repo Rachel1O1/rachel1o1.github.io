@@ -7,6 +7,10 @@ body {
     transition: background-color 400ms, color 400ms;
 }
 
+html {
+    scroll-behavior: smooth;
+   }
+
 .dark1 {
     background-color: #131313;
     color: white;
