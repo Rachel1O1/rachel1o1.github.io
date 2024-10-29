@@ -380,6 +380,10 @@ li a:hover {
     text-align: center;
 }
 
+.spacer1 {
+    min-height: 50vh;
+}
+
 h1 {
     line-height: .8;
 }
