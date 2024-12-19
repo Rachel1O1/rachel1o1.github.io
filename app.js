@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             digestMessage(password).then((digestHex) => {
                 var url = new URL(element.href);
-                url = url.origin + "/Personal-Website/" + digestHex + url.pathname + url.hash;
+                url = url.origin + "/" + digestHex + url.pathname + url.hash;
                 console.log(url);
                 var request = new XMLHttpRequest();
                 request.open('GET', url, false);
