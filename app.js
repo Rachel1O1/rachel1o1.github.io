@@ -1,3 +1,39 @@
+//////////////////////////////////PASSWORD REQUIRED CODE PDFS
+
+async function digestMessage(message) {
+    const msgUint8 = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map((b) => b.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+} //from CSCI356 website
+
+document.addEventListener('DOMContentLoaded', () => {
+    [].forEach.call(document.getElementsByClassName('passwordReq'), (element) => {
+        element.addEventListener('click', (event) => {
+            event.preventDefault();
+            var password = localStorage.getItem('password');
+            if (password === null) {
+                password = prompt('Please enter the password:');
+                localStorage.setItem('password', password);
+            }
+            digestMessage(password).then((digestHex) => {
+                var url = new URL(element.href);
+                url = digestHex + url.pathname + url.hash;
+                var request = new XMLHttpRequest();
+                request.open('GET', url, false);
+                request.send(null);
+                if (request.status === 404) {
+                    localStorage.removeItem('password');
+                    alert('Password Incorrect');
+                } else {
+                    window.location.href = url;
+                }
+            });
+        });
+    });
+}); //inspo from CSCI356 website
+
 //////////////////////////////////SCROLLING ANIMATION CODE
 
 //animates text, imgs, etc. elements as you scroll using 
