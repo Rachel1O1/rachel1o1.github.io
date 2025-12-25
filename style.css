@@ -589,6 +589,17 @@ p {
     align-self: center;
 }
 
+.projectBoxLongNoPic {
+    border-radius: 3vw;
+    padding: 2vw;
+    align-content: center;
+    text-align: left;
+    display: grid;
+    width: 80vw;
+    margin-top: 3vh;
+    align-self: center;
+}
+
 .project1BoxShort {
     border-radius: 3vw;
     padding: 2vw;
